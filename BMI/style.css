@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+  color: #7578F1;
+  font-weight: 500;
+}
+
+input {
+  font-size: 20px;
+  width: 250px;
+  height: 7vh;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  color: #7578F1;
+  padding-left: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input::placeholder {
+  color: lightgrey;
+}
+
+button {
+  font-size: 20px;
+  width: 12vw;
+  height: 7vh;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #7578F1;
+  color: white;
+}
+
+.mainContent {
+  display: flex;
+}
+
+.box {
+  flex: 1;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.box:last-child {
+  margin-right: 0;
+}
+
+#myList {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+#myList ul {
+  line-height: 30px;
+}
+
+.displayImage {
+  padding: 20px;
+  text-align: center;
+}
+
+.displayImage img {
+  width: 25vw;
+}
+
+.result {
+  background-color: #89D79D;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  padding: 35px;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  height: 15vh;
+}
+
+.resultInfo {
+  color: #7578F1;
+}

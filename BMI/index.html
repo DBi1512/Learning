@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMI</title>
+  <link rel="stylesheet" type="text/css" href="Style.css" />
+</head>
+
+<body>
+  <main>
+    <h1 class="title"></h1>
+    <form>
+      <input type="number" id="weight" placeholder="Weight in kg" required min=1
+        max=200 step="1" />
+      <input type="number" id="height" placeholder="Height in meter" required
+        min=0.1 max=2.5 step="0.01" />
+      <button>Calculate</button>
+    </form>
+
+    <div class="mainContent">
+      <div class="box info">
+        <div id="myList"></div>
+      </div>
+      <div class="box displayImage"></div>
+    </div>
+
+    <div class="result">
+      <p class="resultInfo"></p>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
