@@ -1,0 +1,140 @@
+/*
+
+1. Write a function which count the number of occurrence of a word in a paragraph or a sentence.The function countWords takes a paragraph and word as parameters.
+const paragraph = 'I love teaching. If you do not love teaching what else can you love. I love JavaScript if you do not love something which can give life to your application what else can you love.';
+console.log(countWords(paragraph,'love'));
+6
+       2. Write a function which takes an array parameter and returns an array of the data types of each item:
+const arr = ['Asabeneh', 100, true, null, undefined, {job:'teaching'}];
+console.log(checkDatatTypes(arr));
+["string", "number", "boolean", "object", "undefined", "object"]
+const mixedData = ["John", 25, "David", 30, "Sara", 22];
+console.log(checkDatatTypes(mixedData));
+["string","number","string","number","string","number"];
+
+      3. Create a function which filter ages greater than 18.
+const ages = [35, 30, 17, 18, 15, 22, 16, 20];
+console.log(agesGreaterEighteen(ages));
+[35, 30, 22, , 20];
+   
+     4. Write a function which remove an item or items from the middle of the array and replace with two items
+     5. Write a function which calculate the average age of the group. 
+
+console.log(averageAge(ages));
+22
+    6.  Write a function which can generate a random Finnish car code. 
+ console.log(genCarPlateNum())
+AFG-205
+console.log(genCarPlateNum())
+JCB-586
+
+   7. Write a function which can generate  a random Finnish social security number.
+ console.log(genSocialSecurityNum())
+		220590-255H
+console.log(genSocialSecurityNum())
+		190395-225J
+
+
+   8.  The following shopping cart has four products. Create an addProduct, removeProduct and editProduct functions to  modify the shopping cart. Add , remove, edit at least one product
+const shoppingCart = ['Milk','Coffee','Tea', 'Honey'];
+
+addProduct( "Meat");
+["Milk", "Coffee", "Tea", "Honey", "Meat"]
+
+editProduct(3, "Sugar" );
+["Milk", "Coffee", "Tea", "Sugar", "Meat"]
+
+removeProduct(0);
+["Coffee", "Tea", "Sugar", "Meat"]
+removeProduct(3);
+["Coffee", "Tea", "Sugar"]
+
+
+ 
+
+
+
+
+9. The following todoList has three tasks. Create an addTask, removeTask and editTask functions to  modify the todoList. Add, remove or edit at least on task
+const todoList = [
+{
+	task:'Prepare JS Test',
+	time:'3/1/2019 12:00',
+	completed:true
+	
+},
+{
+	task:'Give JS Test',
+	time:'3/1/2019 1:00',
+	completed:false
+	
+},
+{
+	task:'Sprint Retrospective',
+	time:'3/1/2019 3:00',
+	completed:false
+	
+}]
+
+
+
+10. Write a function which check if items of an array are unique?
+const arrOne = [1, 4, 6, 2, 1];
+console.log(checkUniqueness(arrOne));
+false
+const arrTwo = [1, 4, 6, 2, 3]
+console.log(checkUniqueness(arrTwo));
+true
+
+Bonus
+
+11.  Write a function which filter users who has  scoresGreaterThan85, 
+Write a function which addUser  to the user array only if the user does not exist. 
+Write a function which addUserSkill which can add skill to a user only if the user exist. 
+Write a function which editUser if the user exist in the users array.
+const users = [
+{
+	name:'Brook', 
+	scores:75,
+	skills:['HTM', 'CSS', 'JS'],
+	age:16
+},
+{
+	name:'Alex', 
+	scores:80,
+	skills:['HTM', 'CSS', 'JS'],
+	age:18
+}, 
+{
+	name:'David', 
+	scores:75,
+	skills:['HTM', 'CSS'],
+	age:22
+}, 
+{
+	name:'John', 
+	scores:85,
+	skills:['HTM'],
+	age:25
+},
+{
+	name:'Sara',
+	scores:95,
+	skills:['HTM', 'CSS', 'JS'],
+	age: 26
+},
+{
+	name:'Martha', 
+	scores:80,
+	skills:['HTM', 'CSS', 'JS'],
+	age:18
+},
+{
+	name:'Thomas',
+	scores:90,
+	skills:['HTM', 'CSS', 'JS'],
+	age:20
+}
+];
+
+*/
