@@ -137,12 +137,12 @@
 
     https://www.mathsisfun.com/numbers/factorial.html 
 
-  ##Scope
+  ## Scope
     
     LET use ONLY inside { } // BLOCK SCOPE 
     CONST mostly use in Function, Loop, If else 
 
-  ##Object
+  ## Object
 
     https://zellwk.com/blog/looping-through-js-objects/ 
 
@@ -163,13 +163,13 @@
     const entries = Object.entries(fruits); 
     console.log(entries); // [[mandarin, 28], [orange, 5], peach, 3]] 
 
-  ###User input an object property & key: 
+  ### User input an object property & key: 
 
     var myObj = { }; 
     obj[input] = input; // obj[key] = value 
 
 
-  ##DOM
+  ## DOM
 
     addEventListener() 
       
