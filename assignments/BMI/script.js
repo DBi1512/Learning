@@ -40,11 +40,10 @@ displayImage.innerHTML = '<img class="image" src="./img/default.jpg"/>';
 resultInfo.innerHTML = 'Result';
 
 document.getElementById('myList').appendChild(ul); //put ul inside div
-
 lists.forEach(function (listItem) {
   let li = document.createElement('li'); //create li in html
   ul.appendChild(li); //put li inside ul
-  li.innerHTML += listItem.text; //put HTML stuff inside the li
+  li.innerHTML += listItem.text; //put HTML inside the li
   li.style.color = listItem.color; //style the li
 });
 //
