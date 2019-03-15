@@ -1,3 +1,7 @@
+
+s = 5;
+console.log(s);
+
 const title = document.querySelector('.title');
 title.textContent = 'Calculate your BMI';
 

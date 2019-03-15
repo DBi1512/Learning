@@ -1,7 +1,4 @@
-// ARRAY
-//1 Declare an empty array;
 
-const emptyArray = [];
 
 //2 Declare an array with more than 5 number of items
 

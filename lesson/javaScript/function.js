@@ -512,7 +512,7 @@ function displayDateTime() {
   let whatDay = new Date();
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   let whatDate = new Date().getDate();
-  let whatMonth = new Date().getMonth();
+  let whatMonth = new Date().getMonth() +  1; // Month start from 0 - 11;
   let whatYear = new Date().getFullYear();
   let whatHour = new Date().getHours();
   let whatMinute = new Date().getMinutes();
@@ -608,7 +608,7 @@ average([2, 4, 12]);
 // // →"Not Found"
 
 function modifyArray(array) {
-  let newArray = array.slice();
+  let newArray = array.slice(); // make a new array
   if (array.length < 5) {
     console.log(`Item not found.`)
   } else {
@@ -625,7 +625,7 @@ modifyArray(['Milk', 'Egg', 'Tomato', 'Cucumber', 'Protein', 'Cake']);
 // console.log(findMax(0, -10,-2));
 // 0
 
-function findMax(...arr) {
+function findMax(...arr) { // take the parameters as array items
   console.log(arr);
   let max = arr[0]
   for (let i = 0; i < arr.length; i++) {
@@ -684,7 +684,7 @@ console.log(checkDataType(1, 3, 4, 'a'));
 
 function itemUnique(...arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr.includes(arr[i], i + 1)) {
+    if (arr.includes(arr[i], i + 1)) { // 
       return 'Not unique'
     }
   }
@@ -718,3 +718,4 @@ function sevenRandomNumbers() {
   return arr;
 }
 console.log(sevenRandomNumbers());
+
