@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document Object Model</title>
+  <style>
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+    }
+
+    .wrapper>div {
+      width: 150px;
+      height: 150px;
+      margin: 3px;
+      border: 2px solid lightblue;
+      text-align: center;
+      line-height: 150px;
+      font-size: 30px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p class="title">I am a title too</p>
+  <div></div>
+  <h2></h2>
+  <img />
+  <a href="https://github.com/DBi1512/JavaScript-for-Everyone" target="_blank">Github</a>
+
+  <div class="wrapper"></div>
+
+  <script>
+    // const firstTitle = document.getElementById('first-title');
+    // console.log(firstTitle);
+    // console.log(firstTitle.textContent);
+    // const titles = document.getElementsByTagName('h1');
+    // console.log(titles);
+    // console.log(titles.length);
+
+    // for (let i = 0; i < titles.length; i++) {
+    //   console.log(titles[i]);
+    //   console.log(titles[i].textContent);
+    // }
+
+    // const allTitles = document.getElementsByClassName('title');
+    // console.log(allTitles);
+
+    // const firstTitle = document.querySelector('h1');
+    // firstTitle.textContent = 'One';
+
+    // const titles = document.querySelectorAll('h1');
+    // console.log(titles);
+    // for (let i = 0; i < titles.length; i++) {
+    //   console.log(titles[i]);
+    // }
+    // titles.forEach((element, index) => {
+    //   if (index % 2 === 0) {
+    //     element.textContent = 'Even titles';
+    //     element.style.color = 'green';
+    //   } else {
+    //     element.textContent = 'Odds';
+    //     element.style.color = 'gray';
+    //   }
+    //   console.log(index + 1, element)
+    // });
+    // const allTitles = document.querySelector('.title');
+    // console.log(allTitles);
+
+    // //textContent, innerHTML, style
+
+    // const div = document.querySelector('div');
+    // div.innerHTML = `<h1>This Div</h1>`;
+
+    // const h2 = document.querySelector('h2');
+    // h2.innerHTML = `<ul>
+    //     <li>HTML: ${skill.html}</li>
+    //     <li>CSS: ${skill.css}</li>
+    //     <li>Js: ${skill.js}</li>
+    //   </ul>`;
+
+    // Setting Attributes ======================================================================
+
+    // const firstTitle = document.querySelector('h1');
+    // // firstTitle.id = 'first-title';
+    // // firstTitle.className = 'title';
+    // firstTitle.setAttribute('id', 'first-title');
+    // firstTitle.setAttribute('class', 'title');
+    // firstTitle.classList.add('first-class', 'second-class');
+    // console.log(firstTitle);
+
+    const img = document.querySelector('img');
+    img.setAttribute('src',
+      'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12194929/French-Bulldog-on-White-12.jpg'
+    );
+    img.src =
+      'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12194929/French-Bulldog-on-White-12.jpg';
+
+    const link = document.querySelector('a');
+    link.href = 'https://github.com/DBi1512/JavaScript-for-Everyone';
+
+
+    // Creating HTML elements ======================================================================
+
+    // const first = document.createElement('h1');
+    // first.textContent = 'First Title';
+    // first.setAttribute('id', 'first-title');
+
+    // const second = document.createElement('h1');
+    // second.textContent = 'Second Title';
+    // second.setAttribute('id', 'second-title');
+
+    // const third = document.createElement('h1');
+    // third.textContent = 'third Title';
+    // third.setAttribute('id', 'third-title');
+
+    const contents = ['First title', 'Second title', 'Third title'];
+    let title;
+    for (let i = 0; i < 3; i++) {
+      title = document.createElement('h1');
+      title.textContent = contents[i];
+      document.body.appendChild(title);
+      if (i % 2 === 0) {
+        title.style.color = 'green';
+      } else {
+        title.style.color = 'orange';
+      }
+    }
+
+    const wrapper = document.querySelector('.wrapper');
+    let box;
+    for (let i = 0; i < 60; i++) {
+      box = document.createElement('div');
+      box.textContent = i;
+      if (i % 2 === 0) {
+        box.style.backgroundColor = 'orange';
+      } else {
+        box.style.backgroundColor = 'green';
+      }
+      wrapper.appendChild(box);
+    }
+  </script>
+</body>
+
+</html>
