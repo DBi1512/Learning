@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <header>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./skills.html">Skills</a></li>
+      <li><a href="./projects.html">Projects</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <h1>Contact me</h1>
+
+  <main>
+    <form>
+      <fieldset>
+        <legend>HTML 5 Form Validation</legend>
+        <div class="form-group">
+          <label for="firstname">First name:</label>
+          <input type="text" 
+          id="firstname" 
+          name="firstname" 
+          placeholder="First Name" 
+          required pattern="[A-Z][a-z]{1,14}" 
+          class="form-control" />
+          <p class="error-message">Your name must be between 2 and 15 charactors</p>
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">Last name:</label>
+          <input type="text" 
+          id="lastname" 
+          name="lastname" 
+          placeholder="Last Name" 
+          required 
+          class="form-control" />
+          <p class="error-message">Your name must be between 2 and 15 charactors</p>
+        </div>
+
+        <div class="form-group">
+          <label for="region">Region:</label>
+          <input type="text" 
+          id="region"
+          pattern="[Ff]innish|[Ss]wedish|[Dd]anish"
+          class="form-control" />
+          <p class="error-message">Your region should be Finnish, Swedish, or Danish</p>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Type email address" 
+          required
+          class="form-control" />
+          <p class="error-message">Email field is required or Email is invalid</p>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Password" 
+          minlength="6" maxlength="32" />
+          <p class="error-message">Password length must between 6 & 30</p>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="18" max="100" />
+        </div>
+
+        <div class="form-group">
+          <label>Date of Birth:</label>
+          <input type="datetime-local" />
+        </div>
+
+        <div class="form-group">
+          <label>Favorite Color:</label>
+          <input type="color" />
+        </div>
+
+        <div class="form-group">
+          <label>Gender:</label>
+          <input type="radio" name="gender" value="Female" /> Female
+          <input type="radio" name="gender" value="Male" /> Male
+          <input type="radio" name="gender" value="Others" /> Others
+        </div>
+
+        <div class="form-group">
+            <label>Country:</label>
+            <select>
+              <option value="none"></option>
+              <option value="Finland">Finland</option>
+              <option value="Finland">Uk</option>
+              <option value="Finland">Vietname</option>
+              <option value="Finland">Albania</option>
+            </select>
+        </div>
+
+        <div class="formgroup">
+            <label>Skills:</label> <br />
+            <input type="checkbox" /> <label>HTML</label>
+    
+            <input type="checkbox" /> <label>CSS</label>
+    
+            <input type="checkbox" /> <label>JavaScript</label>
+    
+            <input type="checkbox" /> <label>React</label>
+        </div>
+
+        
+
+       
+        <label for="message">Your message goes here:</label> <br />
+        <textarea id="message" name="message" cols="80" rows="5"></textarea>
+        <br />
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="#">Github</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Medium</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
