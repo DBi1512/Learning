@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Destructuring</title>
+</head>
+
+<body>
+
+
+  <script>
+    // function expression and arrow function doesn't allow hoisting
+    /*
+    console.log(square(2));
+    const square = function (x) {
+      return x * x}; */
+
+    // console.log(square(2));
+    // function square (x) {
+    //   return x* x;
+    // }
+
+    // function sum() {
+    //   let total = 0;
+    //   for (let i = 0; i < arguments.length; i++) {
+    //     total = total + arguments[i];
+    //   }
+    //   return total;
+    // }
+    // console.log(sum(1,2,3));
+
+    // num = 5;
+    // console.log(num);
+
+    // const sum = (...args) => {
+    //   let total = args.reduce((accu, curr) => accu + curr);
+    //   return total
+    // };
+    // console.log(sum(1, 2, 3, 4, 5));
+
+    const person = {
+      name: 'Dean',
+      age: 200,
+      getPersonInfo() {
+        console.log(this);
+        return `I am ${this.name}. I am ${this.age}`;
+      }
+    }
+    console.log(person.getPersonInfo());
+
+    // Destructuring
+
+    const names = ['Dean', ' Nathan', 'Chris', 30]
+    let [firstPerson, secondPerson, thirdPerson, num] = names;
+    console.log(firstPerson); // Dean
+    console.log(typeof num);
+
+    const nums = [1, 2, 3];
+    let [num1, num2, num3] = nums;
+    console.log(num2, num3);
+
+    const numOne = [1,2,3,4,5];
+    const numTwo = [6,7,8,9,10];
+    const copyAllNums = [...numOne, ...numTwo]; //copy & join 2 arrays
+    console.log(copyAllNums);
+
+    const countries = ['Iceland', 'USA', 'Spain', 'Estonia',
+      'Finland', 'Sweden', 'Norway'
+    ];
+    let [ice, usa, spa, , ...scandic] = countries; //, empty space , means omitting. ...words: select the rest.
+    console.log(ice, usa, spa);
+    console.log(scandic);
+    console.log(scandic.splice(0, 1)); // Select the index country;
+    console.log(scandic);
+
+
+
+    const rectangle = {
+      width: 20,
+      height: 10,
+      area: 200,
+      perimeter: 80
+    };
+    console.log(rectangle['width']);
+    let {
+      width: w,
+      height: h,
+      area: a,
+      perimeter: p = 60
+    } = rectangle;
+    console.log(w, h, a, p);
+
+    // function calculateArea(obj) {
+    //   return obj.height * obj.width;
+    // }
+    // console.log(calculateArea(rectangle));
+
+    function calculateArea(obj) {
+      let {width, height} = obj;
+      return width * height;
+    }
+    console.log(calculateArea(rectangle));
+
+    // function perimeter(obj) {
+    //   return 2 * (obj.width + obj.height);
+    // }
+    // console.log((perimeter(rectangle)));
+
+    // function perimeter({
+    //   width,
+    //   height
+    // }) {
+    //   return 2 * (width + height);
+    // }
+    // console.log((perimeter(rectangle)));
+  </script>
+</body>
+
+</html>
