@@ -117,20 +117,26 @@
       padding: 15px;
       border-radius: 5px;
       font-size: 16px;
+      transition: all 0.3s ease;
     }
 
     .box:hover {
-      text-transform: uppercase;
       transform: scale(1.2);
-      transition: all 0.3s ease;
       z-index: 999;
       opacity: 1;
       font-weight: bold;
     }
 
-    /* .text-color {
+    .text-color {
       mix-blend-mode: difference;
-    } */
+    }
+
+    .keyword {
+      color: yellow;
+      /* Capitalize the keyword if it's at the 1st letter of the word. */
+      text-transform: capitalize;
+    }
+
   </style>
 
 </head>
@@ -139,7 +145,7 @@
   <main>
     <header>
       <h2>World Countries List</h2>
-      <p>Total Number of countries: <span class="numCountries"></span></p>
+      <p>There are <span class="numCountries"></span> countries in the world.</p>
       <span class="result"></span>
       <button class="first" id="startingWord">Starting Word</button>
       <button class="active" id="anyWord">Search with any Word</button>

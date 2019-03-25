@@ -282,15 +282,18 @@ function showCountries() {
 function generateCountries(inputCountries) {
   wrapper.innerHTML = "";
   for (let i = 0; i < inputCountries.length; i++) {
-    let box = document.createElement('div');
+    const box = document.createElement('div');
     box.classList.add('box');
     wrapper.appendChild(box);
-    let span = document.createElement('span');
-    span.innerHTML = inputCountries[i];
+    const span = document.createElement('span');
     box.appendChild(span);
-    let backgroundColor = randNumHexGenerator();
+    const backgroundColor = randNumHexGenerator();
     box.style.background = `linear-gradient(to bottom, ${backgroundColor} 10%, transparent 100%)`;
     span.style.color = contrastTextBackground(backgroundColor);
+
+    //extra: RegExp, change the search keyword to different color
+    const key = new RegExp(input.value, "gi");
+    span.innerHTML = inputCountries[i].replace(key, `<b class="keyword">${input.value.toLowerCase()}</b>`);
   }
 }
 
