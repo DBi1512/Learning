@@ -126,12 +126,11 @@
       flex: 70%;
       padding: 30px;
       width: 100%;
-      font-weight: bold;
     }
 
     .wrapper button {
       flex: 20%;
-      max-width: 10vw;
+      max-width: 6vw;
       min-width: 55px;;
       padding: 5px 0;
       margin-right: 30px;
@@ -175,6 +174,7 @@
     // document.addEventListener('DOMContentLoaded', function () {
     // })
 
+    // add animation class to the body, also when click inside the input. And remove the animation when click button
     body.classList.add('animation');
     input.addEventListener('click', function () {
       body.classList.add('animation')
@@ -185,7 +185,9 @@
 
     function copyToClipboard(){
       const copyText = document.createElement('textarea');
-      // copyText.value = this.parentNode.querySelector('.text').textContent;
+      // can select manually the value inside, console.log(this) to check what this is. => copyText.value = this.parentNode.querySelector('.text').textContent;
+      
+      // use dataset to call directly the value (setup dataset below)
       copyText.value = this.dataset.colorValue;
       document.body.appendChild(copyText);
       copyText.select();
@@ -228,7 +230,7 @@
 
         let button = document.createElement('button');
         button.textContent = 'Copy';
-        // Use dataset for better call.
+        // Use dataset for better call: el.dataset.randVar
         button.dataset.colorValue = color;
         box.appendChild(button);
         button.addEventListener('click', copyToClipboard);
