@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sorting</title>
+</head>
+
+<body>
+
+  <script>
+    const numbers = [10, 2, 13, 44, 5];
+    // const compare = function (a,b){
+    //   return b - a;
+    // }
+    // console.log(numbers.sort(compare));
+
+    //or
+    console.log(numbers.sort(function (a, b) {
+      return a - b;
+    }));
+
+    //or
+    console.log(numbers.sort(function (a, b) {
+      return a > b;
+    }));
+
+    //copy Array
+    // const copyNumbers = numbers.slice(0);
+    //or
+    // const copyNumbers = [].concat(numbers);
+    //or
+    const copyNumbers = [...numbers]; // newest way.
+    copyNumbers.sort(function(a,b){
+      return b-a;
+    });
+    console.log(copyNumbers);
+    
+
+
+
+
+    //compare Strings
+    const names = ['Dean','Nathan', 'Chris','Pasi'];
+    const sortNames = names.sort(function(a,b){
+      if (a < b){
+        return -1;
+      }
+    })
+    console.log(sortNames);
+    
+  </script>
+</body>
+
+</html>
