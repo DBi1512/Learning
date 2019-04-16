@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Local Storage</title>
+</head>
+
+<body>
+
+  <script>
+    // const skills = ['HTML', 'CSS', 'Js', 'React'];
+    // localStorage.setItem("name", "Dean");
+    // localStorage.setItem("age", 30);
+    // localStorage.setItem("skills", skills);
+
+    const person = {
+      name: 'Dean',
+      age: 30,
+      skills: ['HTML', 'CSS', 'Js', 'React']
+    };
+
+    console.log(localStorage);
+    // localStorage.setItem('person', person); // [Obj, obj] - wrong
+    // If we have Object, we need to Stringify before adding
+    let stringifyPerson = JSON.stringify(person, undefined, 2);
+    localStorage.setItem('person', stringifyPerson);
+    console.log(localStorage.getItem('person'));
+    const parsedPerson = JSON.parse(localStorage.getItem('person'));
+    console.log(parsedPerson);
+
+
+    // Exercise
+    const products = {
+      name: 'laptop',
+      model: 2018,
+      description: 'almost new',
+      accessories: ['mouse', 'keyboard', 'charger', 'cable']
+    }
+
+    let productJSON = JSON.stringify(products, undefined, 2);
+    localStorage.setItem('products', productJSON);
+    const productObj = JSON.parse(localStorage.getItem('products'));
+    console.log(productObj);
+    console.log(
+      `This ${productObj.model} model ${productObj.description} laptop came with ${productObj.accessories.join(', ')}.`
+      );
+
+    let statement = '';
+    productObj.accessories.forEach(accessory => {
+      statement += ' ' + accessory;
+    });
+    console.log(statement);
+    
+  </script>
+</body>
+
+</html>

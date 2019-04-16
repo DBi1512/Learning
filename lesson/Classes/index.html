@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Classes</title>
+  </head>
+
+  <body>
+    <p>Classes</p>
+
+    <script>
+      console.log("Lets learn about Class");
+
+      // Class: CamelCase
+      // Variable: camelCase
+
+      function areaOfCircle(radius) {
+        return Math.PI * radius * radius;
+      }
+
+      class Person {
+        constructor(namee, age, country = "Finland") {
+          // can set default value (Finland)
+          this.name = namee;
+          this.age = age;
+          this.country = country;
+          this.point = 0;
+        } // NO COMMA,
+
+        getInfo(profession = "DJ") {
+          return `My name is ${this.name}.\nI'm ${
+            this.age
+          } yrs old.\nI'm from ${this.country}.\nI'm a ${profession}.`;
+        } // NO COMMA,
+
+        // increasePoint(x) {
+        //   this.point = this.point + 1 + x;
+        // }
+
+        get increasePoint() {
+          return this.point + 1;
+        }
+
+        set setAge(agee) {
+          this.age = AudioProcessingEvent;
+        }
+      }
+
+      const personOne = new Person("Dean", 30, "Vietnam");
+      const personTwo = new Person("Nathan", 33); // no value => default value
+
+      console.log(personOne.age);
+      console.log(personOne.getInfo());
+      console.log(personTwo.getInfo("hair-dresser"));
+      // personOne.increasePoint(4);
+      personOne.setAge = 100;
+      console.log(personOne);
+      console.log(personOne.increasePoint);
+
+      // INHERITANCE
+      class Student extends Person {
+        constructor(name, age, skills, live) {
+          super(name, age);
+          this.skills = skills;
+          this.live = live;
+        }
+        getSkills() {
+          return `I have these skills: ${this.skills}`;
+        }
+        // OverRide
+        getInfo() {
+          return `I am ${this.name}`;
+        }
+      }
+
+      const student = new Student("Hoang", 25, ["HTML", "CSS", "Js"]);
+      console.log(student);
+      console.log(student.getInfo("Nurse"));
+      console.log(student.getSkills());
+
+      // Object reminder
+      const newStudent = {
+        name: "Chris",
+        age: 33,
+      };
+      //set
+      newStudent.nationality = "Finnish";
+      console.log(newStudent);
+
+      // FUNCTION  ====================================================================================================
+      function Aperson(name, age, country, skills) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+        this.skills = skills;
+        this.point = 0;
+        this.getInfo = function() {
+          return `I am ${this.name} & ${this.age} yrs old from ${this.country}`;
+        };
+      }
+      const newPersonOne = new Aperson("Dean", 30, "Vietnam");
+      const newPersonTwo = new Aperson("Chris", 33, "USA");
+      console.log(newPersonOne);
+      console.log(newPersonTwo.getInfo());
+
+      Aperson.prototype;
+
+      // 2nd Classes Lesson
+
+      class Animal {
+        constructor(name, color, breed) {
+          this.name = name;
+          this.color = color;
+          this.breed = breed;
+        }
+        static getAnySkill() {
+          const skills = ["Jump", "Run", "Hunt", "Dance", "Bark"];
+          const index = Math.floor(Math.random() * 5);
+          const skill = skills[index];
+          return `I can ${skill}`;
+        }
+
+        get getName() {
+          return this.name;
+        }
+
+        set setName(name) {
+          this.name;
+        }
+
+        getAnimalInfo() {
+          return `I am ${this.name}. I'm ${this.color}. I'm a ${
+            this.breed
+          }. <3`;
+        }
+      }
+
+      // const dog = new Animal("Cee Cee", "brown", "frenchie");
+      // const cat = new Animal("Boo Boo", "white", "royal");
+      // const tiger = new Animal("Roaud", "stripe", "Asian");
+      // console.log(dog, cat, tiger);
+      // console.log(dog.getAnimalInfo());
+      // console.log(dog.getName);
+      // dog.setName = "Fluffy";
+      // console.log(dog.getName);
+      // console.log(Animal.getAnySkill());
+
+      class Cat extends Animal {
+        constructor(name, color, breed, cleanLitter) {
+          super(name, color, breed);
+          this.cleanLitter = cleanLitter;
+        }
+
+        cleanMyLitter() {
+          return `I am ${this.name} & I can ${this.cleanLitter}.`;
+        }
+
+        sayMeow() {
+          return `meow`;
+        }
+      }
+
+      const cat = new Cat("Kitty", "white", "longHair", "clean my shit");
+      console.log(cat.getAnimalInfo());
+      console.log(cat.sayMeow());
+      console.log(cat.cleanMyLitter());
+    </script>
+  </body>
+</html>

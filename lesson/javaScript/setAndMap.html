@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Set & Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  
+  <script>
+    const langs = ['eng', 'eng', 'eng', 'swe', 'fin', 'can', 'vn', 'can', 'swe'];
+    let set = new Set(langs);
+    // for(lang of langs){
+    //   set.add(lang);
+    // }
+    console.log(set);
+    console.log(set.size);
+
+    const companies = new Set();
+    companies.add('Facebook');
+    companies.add('Apple');
+    companies.add('Microsoft');
+    companies.add('Integrify');
+    companies.add('Google');
+    companies.add('Google'); // no show, already exist.
+
+    console.log(companies);
+    console.log(companies.size);
+
+    companies.delete('Integrify');
+    console.log(companies);
+    
+    companies.has('Integrify');
+    console.log(companies.has('Integrify')); // false
+    console.log(companies.has('Facebook')); // true
+    console.log(companies.has('facebook')); // false - Case Sensitive
+    
+    // // delete all.
+    // companies.clear(); 
+    // console.log(companies);
+    
+    for(company of companies) {
+      console.log(company);
+    }
+    
+    // MAP
+
+    const map = new Map();
+    map.set('Helsinki', 'Finland');
+    map.set('Tallin', 'Estonia');
+    map.set('Stockholm', 'Sweden');
+    console.log(map);
+    console.log(map.get('Helsinki'));
+    console.log(map.get('Tallin'));
+    console.log(map.size);
+    console.log(map.has('Helsinki')); // true, only check KEY
+    console.log(map.has('Finland')); // false, only check KEY, Finland is value.
+    // map.delete('Helsinki');
+    // console.log(map);
+    // map.clear();
+    // console.log(map);
+
+    //
+    let count = 0;
+    for(const [capital, country] of map){
+      if (count < 1) {
+      console.log(`The capital of ${country} is ${capital}.`);
+      }
+      count ++;
+    }
+    
+    console.log(map.keys());
+    for(const capital of map.keys()) {
+      console.log(capital);
+    }
+    for(const country of map.values()) {
+      console.log(country);
+    }
+    for(const capitalAndCountry of map.entries()) {
+      console.log(capitalAndCountry);
+    }
+
+    map.forEach((country, index) => {
+      console.log(`What is the index of ${index}: ${country}`);
+      
+    });
+
+
+    /* in MAP, KEY can be Number, String, Object ... 
+    in OBJECT, KEY can ONLY be String. */
+
+  </script>
+</body>
+</html>
